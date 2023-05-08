@@ -3,22 +3,13 @@
     <head>
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
+            /*Created class names to use for toggle functions*/
             .boldclass{
                 font-weight: bold;
             }
             .italicclass{
                 font-style: italic;
             }
-            /*Not working right now-->
-            .leftalignclass{
-                text-align: left;
-                font-weight: bold;
-            }
-            .centeralignclass{
-                text-align: center;
-                font-weight: bold;
-            }
-            */
             .uppercaseclass{
                 text-transform: uppercase;
             }
@@ -30,6 +21,7 @@
             }
         </style>
         <script>
+            //Created functions for buttons to get the classes to toggle
             function bold() {
                 document.getElementById('textbox').classList.toggle('boldclass');
             }
@@ -45,60 +37,43 @@
             function capitalize() {
                 document.getElementById('textbox').classList.toggle('capitalize')
             }
-            /*Not working right now
-            function leftalign() {
-                document.getElementById('textbox').classList.add('leftalignclass');
-            }
-            function centeralign() {
-                document.getElementById('textbox').classList.add('centeralignclass');
-            }
-            */
-        
         </script>
     </head>
-
     <header class="text-indigo-300 text-center text-7xl p-10 border border-b-gray-400 shadow-md">TEXT EDITOR
     </header>
-    
     <body>
         <div class="flex flex-row gap-2 m-5 text-center justify-center">
-        <!--HTML modifier buttons-->
+        <!--HTML modifier buttons bold and italic, used functions onclick to execute toggle formatting-->
             <button type="button" onclick="bold()"
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3 min-w-96">Bold</button>
-
             <button type="button" onclick="italic()" 
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3">Italic</button>
-
+        <!--Alignment Buttons with Images but No Toggle Functions-->
             <button type="button" onclick="document.getElementById('textbox').style.textAlign='left'"
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
                 </svg>                  
             </button>
-
             <button type="button" onclick="document.getElementById('textbox').style.textAlign='center'"
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
                   </svg>                                  
             </button>
-
             <button type="button" onclick="document.getElementById('textbox').style.textAlign='right'"
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
                   </svg>                                    
             </button>
-
+        f<!--HTML modifier buttons casing, used functions onclick to execute toggle formatting-->
             <button type="button" onclick="uppercase()"
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3">Upper case</button>
-
             <button type="button" onclick="lowercase()"
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3">Lower case</button>
-
             <button type="button" onclick="capitalize()"
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3">Capitalize</button>
-
             <button type="button" onclick="document.getElementById('textbox').value=''"
             class="text-gray-400 border border-indigo-300 rounded m-1 text-sm font-semibold px-4 py-3">Clear text</button>
         </div>
